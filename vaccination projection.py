@@ -111,15 +111,19 @@ crossoverDate = dates[0] + timedelta(days=crossover)
 plt.scatter(days, dailyVaccinations, label='True daily vaccinations')
 plt.plot(x, yhat, color='r', label=f'y = {round(m,3)}x + {round(b,3)}')
 plt.legend()
-plt.title(date.today())
+plt.xlabel(f'Number of days since {dates[0]}')
+plt.ylabel('Number of daily vaccinations')
+plt.title(f'Projection of daily vaccinations from {date.today()}')
 if saveFigs:
     plt.savefig('Projected daily vaccinations ' + str(date.today()))
 plt.show()
 plt.close()
-plt.plot(x[1:], projectedVaccinations, label='Projected Vaccinations')
+plt.plot(x[1:], projectedVaccinations, label='Projected Full Vaccinations')
 plt.plot(x[1:], [330e6 for _ in range(len(projectedVaccinations))], label='Total US Population (330 million)')
 plt.legend()
-plt.title(date.today())
+plt.xlabel(f'Number of days since {dates[0]}')
+plt.ylabel('Number of full vaccinations')
+plt.title(f'Projection of full vaccinations from {date.today()}')
 if saveFigs:
     plt.savefig('Projected total vaccinations ' + str(date.today()))
 plt.show()
@@ -128,6 +132,7 @@ if crossover == 0:
     print('This projects not all US citizens will be vaccinated within the timeframe')
 else:
     print('This projects all US citizens may be vaccinated by', crossoverDate.strftime('%B %d, %Y'))
+    print("Please note that this doesn't factor in vaccine skepticism, an upper limit to daily vaccinations, and other unforseen challenges. This projection is beyond optimistic, but it's probably reasonable to assume that the general population will be allowed to request vaccines by this date, even if they're difficult to get.")
 
 if shouldLogProjections:
     todayAlreadyExists = False
