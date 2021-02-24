@@ -7,6 +7,15 @@ This program downloads data about the current progress of COVID-19 vaccinations 
 ## Files it creates
 It creates 2 csv files and 2 new optional png files every day.
 
+## Dependencies
+This program is dependent on the following modules not installed by default in python:
+wget
+scipy
+matplotlib
+
+The file environment.yml is an exported anaconda environment that should work to run this script.
+Alternatively, install.sh *should* install the dependenceis on Ubuntu, but I've only tested it on 20.04.
+
 ## Legal information
 The data is sourced (by default) from the [Our World in Data COVID-19 repository](https://github.com/owid/covid-19-data) under the [Creative Commons BY license](https://creativecommons.org/licenses/by/4.0/). This code is licensed likewise.
 
