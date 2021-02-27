@@ -9,7 +9,7 @@ It creates 2 csv files and 2 new optional png files every day.
 
 ## Dependencies
 This program is dependent on the following modules not installed by default in python:
-wget
+pywget
 scipy
 matplotlib
 
