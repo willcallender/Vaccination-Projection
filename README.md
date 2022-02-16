@@ -1,5 +1,6 @@
 # Vaccination-Projection
-Projects when the US will be fully vaccinated.
+~~Projects when the US will be fully vaccinated.~~
+It's useless now.
 
 ## How it works
 This program downloads data about the current progress of COVID-19 vaccinations in the United States to project the total number of vaccinations going forward. It does this by getting data about the number of vaccinations per day since vaccines first became approved. It then runs linear regression over that data to determine how fast the number of daily vaccinations is increasing. It integrates this projection and accounts for the current number of people fully vaccinated and the fact that both vaccines require 2 shots for full vaccination. It shows this with some graphs and a crude projection for when the US could be fully vaccinated.
